@@ -61,7 +61,7 @@ Below is my freeform drawing!
 <body>
 <section id=buttons>
 <a id="goup" href="#introduction">Back to Introduction...</a><br><br>
-<b>Buttons!</b>
+<b>Buttons!!!</b>
 <table style="width:30%">
 <tr> 
 <!--buttons!!!!!!! can also change button types to be used with forms--, window.open opens new tab with full link as param-->
