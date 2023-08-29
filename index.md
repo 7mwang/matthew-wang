@@ -2,6 +2,7 @@
 layout: default
 title: Student Blog
 ---
+<section id="introduction"></section>
 <!--gives td, or table data a white border of thickness 1 pixel-->
 <!--setting background image, and making sure the site looks good and has enough space by expanding minimum height-->
 <style>
@@ -18,8 +19,6 @@ body {
 }
 </style>
 <!--creates a section that can be hyperlinked, with id introduction, so if you want to make a link to it it would be "https://www.url.com/#introduction", can be used to go to different sections of a page-->  
-<section id="introduction">
-</section>
 <font size ="+5">
 <u>
 <!--<u> underlines, <span> can be used similarly to <div> but can be used in between lines, while div is used in big chunks/blocks, div is used to make/mark sections (not the same as <section>)-->
@@ -37,11 +36,10 @@ Hey, my name is Matthew Wang, welcome to my CSP Page!
 <!--<a> is a hyperlink, href is the link/website addon that will be activated when hyperlink is pressed. You can also put a button where it says "down to buttons..." to make it so you click a button to activate the link instead of clicking text-->
 <ul>
 <li><a id="godown" href="#aboutme">About me!</a></li><br>
-<li><a id="godown" href="#buttons">Resources</a></li>
 </ul>
 </font>
 <font size="+2">
-<br><br><br><br><br><br><br><br><br><br><br><br><section id="aboutme">
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><section id="aboutme">
 <br><br><br><br><hr><a id="goup" href="#introduction">Back to Introduction...</a><br>
 Some things about me:
 <!--<ul> = bulletted list, every content in <li> (list) will be bulletted -->
@@ -60,35 +58,7 @@ Below is my freeform drawing!
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <!--creates a large separator line-->
 <hr class="dotted">
-<body>
-<section id=buttons>
-<a id="goup" href="#introduction">Back to Introduction...</a><br><br>
-<u><b>Resources</b></u>
-<br>
-<p>Docs</p>
-<ul>
-    <li><button style="background-color: #2aa324; padding: 18px" type="button" onclick="window.open('https://www.w3schools.com/html/')">Open HTML docs</button></li>
-    <li><button style="background-color: #577a51; padding: 18px"
-    type="button" onclick="window.open('https://www.w3schools.com/python/')">Open Python docs</button></li>
-    <li><button style="padding: 18px" type="button" onclick="window.open('https://www.w3schools.com/js/')">Open JS docs</button></li>
-</ul>
-<br>
-<p>School-related Resources</p>
-<ul>
-    <li><button style="background-color: #e84f4f; padding: 18px" type="button" onclick="window.open('https://poway.instructure.com')">Open Canvas</button></li>
-    <li><button style="background-color: #063970; padding: 18px" type="button" onclick="window.open('https://launchpad.classlink.com/poway')">Open MyPlan</button></li>
-    <li><button style="background-color: #51767a; padding: 18px" type="button" onclick="window.open('https://sis.powayusd.com/PXP2_Login.aspx')">Open Synergy</button></li>
-</ul>
-<br>
-<p>CSP-specific Resources</p>
-<ul>
-    <li><button style="background-color: #4fcce8; padding: 18px" type="button" onclick="window.open('https://app.slack.com/client/TUDAF53UJ')">Open the CSP Slack</button></li>
-    <li><button style="background-color: #444444; padding: 18px" type="button" onclick="window.open('https://nighthawkcoders.github.io/teacher/')">Open Nighthawk Coders site</button></li>
-</ul>
-<table style="width:30%">
-<tr> 
-<!--buttons!!!!!!! can also change button types to be used with forms--, window.open opens new tab with full link as param  
-    <td><button style="background-color: ##F0EDE1; padding: 18px" type="button" onclick="window.open('https://www.google.com')">Open google.com</button></td>
-    <tr>
-    <td><button style="background-color: #4fcce8; padding: 18px" type="button" onclick="window.open('https://app.slack.com/client/TUDAF53UJ')">Open the CSP Slack</button></td>
-    <td><button style="background-color: #444444; padding: 18px" type="button" onclick="window.open('https://nighthawkcoders.github.io/teacher/')">Open Nighthawk Coders site</button></td>-->
+<br><br><br><br><br><br><br><br>
+<hr>
+<section id="accomplishments">
+<b>Accomplishments</b>
