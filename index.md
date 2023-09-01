@@ -6,7 +6,7 @@ title: Student Blog
 <!--gives td, or table data a white border of thickness 1 pixel-->
 <!--setting background image, and making sure the site looks good and has enough space by expanding minimum height-->
 <style>
-p{text-alignt: left}
+p{text-align: left}
 td{
   border:1px solid white;
 }
