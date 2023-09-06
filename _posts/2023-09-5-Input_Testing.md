@@ -3,11 +3,12 @@ toc: true
 comments: true
 layout: post
 title: Input Testing
-description: Here is a space I am currently using to test inputs.
+description: This is where I will do input testing with forms
 type: tangibles
-courses: { csp: {week: 3, categories: [4.A]}}
+courses: { csp: {week: 2, categories: [4.A]}}
 categories: [C1.4]
 ---
+<!-- Create a simple Program to build the Calculator in JavaScript using with HTML and CSS web languages. -->
 <html lang = "en">
 <head>
 
@@ -62,19 +63,18 @@ border: 5px solid black;
 }
 
 </style>
-
-</head>
+<html>
 <body>
-<h1> Calculator Program in JavaScript </h1>
-<div class= "formstyle">
-<form name = "form1">
-	
-	<!-- This input box shows the button pressed by the user in calculator. -->
-<input id = "calc" type ="text" name = "answer"> <br> <br>
-<!-- Display the calculator button on the screen. -->
-<!-- onclick() function display the number prsses by the user. -->
-<input type = "text" onclick = "form1.answer.value += '' ">
+<script>
+    var num = 0;
+    function add() {
+        var click = document.getElementById('click');
+        num++;
+        click.value = String(num);
+        document.getElementById('add').value = String(num);
+    }
+</script>
+<form NAME="myform">
+    <input TYPE="button" NAME="click" VALUE="0" id="click" onclick="add()">
+    <input TYPE="text" ID="add" NAME="result" VALUE="">
 </form>
-</div>
-</body>
-</html>
