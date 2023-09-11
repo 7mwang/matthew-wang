@@ -60,5 +60,3 @@ Below is my freeform drawing!
 <hr class="dotted">
 <br><br><br><br><br><br><br><br>
 <hr>
-<section id="accomplishments">
-<b>Accomplishments</b>
