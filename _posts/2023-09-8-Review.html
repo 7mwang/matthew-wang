@@ -7481,7 +7481,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>This is a review of all of the content gone over thusfar, including:</p>
+<p><font color="purple" size="18px">This is a mini-lesson of all of the content gone over thusfar, including:</font></p>
 <ul>
 <li>Python</li>
 <li>Javascript</li>
@@ -7707,6 +7707,20 @@ Matthew Wang, your score is: 2/2, or 100.0 percent !
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Some examples of JS code:<br/>
+<a href="/matthew-wang//c1.4/2023/08/30/Snake.html">Snake</a><br/>
+<a href="/matthew-wang//c1.4/2023/09/05/Input_Testing.html">Cps test</a><br/>
+<a href="/matthew-wang//c1.4/2023/09/01/Calculator.html">Calculator</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>p.s. end all Javascript code with ;</p>
 </div>
 </div>
@@ -7721,7 +7735,7 @@ Matthew Wang, your score is: 2/2, or 100.0 percent !
 <p><b>Intro to HTML</b></p>
 <p>HTML is used for web-development, as is JavaScript.</p>
 <p>Tags:
-Tags are used like functions are in Python and Javascript. They start with <tag>, and end with </tag>
+Tags are used like functions are in Python and Javascript. They start with "&lt; a tag &gt;", and end with "&lt; /a tag &gt;"
 <p>:
 <p> is used to define a paragraph. You can put text in these</p>
 <pre><code>        &lt;span&gt;:
@@ -7760,6 +7774,136 @@ Tags are used like functions are in Python and Javascript. They start with <tag>
 <p>Formatting:
 Many, if not all of the html tags include formatting. You can change sizes, colors, and alignment, along with most anything you could think of.</p>
 </p></p></div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><b>Intro to Bash</b></p>
+<p>Bash is used in the Linux terminal, and is mainly used for interaction with files, and occasionally installations and other things.</p>
+<p>Main Commands:</p>
+<pre><code>    cd:
+        Change directory, can change to the folder path that you provide
+            ex. cd /matth/project/assets
+
+    ls:
+        Lists all the files in the directory
+
+    echo:
+        prints string/text data into the terminal, or can print commands
+            ex. echo "hello" would put hello into the terminal, or echo cd /matth/projects/assets would execute the command
+    
+    cat:
+        prints the text contents of a file
+            ex. cd /matth/projects/assets
+                cat data.txt
+                    -&gt; data data woo data
+    
+    </code></pre>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span>                            <span class="o">%%</span><span class="k">script</span> bash
+                            echo "Installed tools and versions:"
+                            pip --version
+                            brew --version
+                            ruby -v 
+                            jupyter --version
+                            echo "Switch to project directory"
+                            echo""
+                            cd /mnt/c/Users/matth/matthew-wang/
+                            echo "List files and folders in project directory"
+                            echo""
+                            ls
+                            echo "print text content of _config.yml"
+                            echo""
+                            cat _config.yml
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Installed tools and versions:
+pip 22.0.2 from /usr/lib/python3/dist-packages/pip (python 3.10)
+Homebrew 4.1.6
+ruby 3.0.2p107 (2021-07-07 revision 0db68f0233) [x86_64-linux-gnu]
+Selected Jupyter core packages...
+IPython          : 7.31.1
+ipykernel        : 6.7.0
+ipywidgets       : 6.0.0
+jupyter_client   : 7.1.2
+jupyter_core     : 4.9.1
+jupyter_server   : not installed
+jupyterlab       : not installed
+nbclient         : 0.5.6
+nbconvert        : 7.8.0
+nbformat         : 5.9.2
+notebook         : 6.4.8
+qtconsole        : not installed
+traitlets        : 5.1.1
+Switch to project directory
+
+List files and folders in project directory
+
+Gemfile
+Gemfile.lock
+LICENSE
+Makefile
+README.md
+_config.yml
+_data
+_includes
+_layouts
+_notebooks
+_posts
+_site
+csa.md
+csp.md
+csse.md
+images
+index.md
+indexBlogs.md
+resources.md
+scripts
+testytesty.md
+print text content of _config.yml
+
+title: CompSci Blogs
+description: "August 2023 to June 2024"
+owner_name: Matthew Wang
+github_username: 7mwang
+baseurl: "/matthew-wang"
+remote_theme: pages-themes/hacker@v0.2.0
+# remote_theme: pages-themes/dinky@v0.2.0
+# remote_theme: pages-themes/minimal@v0.2.0
+# remote_theme: pages-themes/hacker@v0.2.0
+# remote_theme: pages-themes/cayman@v0.2.0
+# remote_theme: pages-themes/time-machine@v0.2.0
+plugins:
+- jekyll-remote-theme
+future: true
+</pre>
+</div>
+</div>
 </div>
 </div>
 </div>
