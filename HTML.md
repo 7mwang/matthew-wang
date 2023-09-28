@@ -1,0 +1,54 @@
+---
+toc: true
+comments: true
+title: "HTML, DOM"
+description:
+type: hacks
+courses: { csp: {week: 5, categories: [4.A]}}
+categories: [C1.4]
+---
+<script>
+var clicked = false;
+function create(){
+    if (clicked == false){
+        clicked = true;
+        document.getElementById("p1").innerHTML = "hello! thanks for clicking me :)";
+    }
+    else {
+        clicked = false
+        document.getElementById("p1").innerHTML = "you already clicked me :(";
+    }
+}
+function switchLink(){
+    var link1 = document.getElementById("link1")
+    var link2 = document.getElementById("link2")
+    var discord = "https://discord.com/app"
+    var google = "https://google.com"
+    document.getElementById("p1").innerHTML = "Switched!"
+    if (clicked == false){
+        clicked = true;
+        link1.innerHTML = "Free Cookies";
+        link1.setAttribute("href", discord)
+        link2.innerHTML = "Free Virus";
+        link2.setAttribute("href", google)
+    }
+    else {
+        clicked = false
+        link2.innerHTML = "Free Cookies";
+        link2.setAttribute("href", discord)
+        link1.innerHTML = "Free Virus";
+        link1.setAttribute("href", google)
+    }
+}
+</script>
+<div>
+<p id="p1">Hello! This is a p inside a div.</p>
+<button type="button" id="b1" onclick="create()">This is a button.</button>
+</div>
+<div>
+<a id = "link1" href = "https://google.com">Free Virus</a>
+<a id = "link2" href = "https://discord.com/app">Free Cookies</a>
+<p>click these links thanks</p>
+<button type="button" id="switch" onclick="switchLink()">Switch the links...</button>
+</div>
+
