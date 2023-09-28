@@ -1,8 +1,10 @@
 ---
 toc: true
+hide: true
 comments: true
 title: "HTML, DOM"
-description:
+permalink: /basics/dom
+author: Matthew Wang
 type: hacks
 courses: { csp: {week: 5, categories: [4.A]}}
 categories: [C1.4]

@@ -51,6 +51,7 @@ border: 5px solid black;
 </style>
 <html>
 <body>
+<p id = timer></p>
 <script>
     var num = 0;
     var startTime = 0;
