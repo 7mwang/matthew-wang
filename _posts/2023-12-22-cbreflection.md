@@ -4,8 +4,8 @@ comments: true
 layout: post
 title: College Board Practice MCQ Reflection
 description: College Board Practice MCQ Reflection
-courses: {'compsci': {week: 18}}
-type: tangibles
+courses: {csp: {week: 13}}
+type: plans
 permalink: reflection
 ---
 To prepare for the College Board Practice MCQ, I did a couple things:
