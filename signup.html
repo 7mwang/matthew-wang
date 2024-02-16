@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #signup-container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #error-message {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="signup-container">
+        <h2>Signup</h2>
+        <div id="error-message"></div>
+        <form id="signup-form">
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="text" id="uid" placeholder="User ID" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <input type="text" id="dob" placeholder="Date of Birth (YYYY-MM-DD)">
+            <button type="button" onclick="signup()">Signup</button>
+        </form>
+        <p>Already have an account? <a href="/login">Login</a></p>
+    </div>
+
+    <script>
+function signup() {
+    document.cookie = `name=jwt; max-age=3600; secure; httponly; path=/; samesite=None`;
+    const name = document.getElementById('name').value;
+    const uid = document.getElementById('uid').value;
+    const password = document.getElementById('password').value;
+    const dob = document.getElementById('dob').value;
+
+    fetch('http://127.0.0.1:8086/api/users', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `${getAuthToken()}`, // Include the token in the headers
+        },
+        body: JSON.stringify({
+            name: name,
+            uid: uid,
+            password: password,
+            dob: dob,
+        }),
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+    })
+    .then(data => {
+        // Check if the response is a valid JSON object
+        if (typeof data === 'object') {
+            document.getElementById('error-message').textContent = '';
+
+            // Perform authentication after successful signup
+            authenticate(uid, password);
+        } else {
+            throw new Error('Invalid JSON data received');
+        }
+    })
+    .catch(error => {
+        console.error('Signup error:', error);
+        document.getElementById('error-message').textContent = 'Signup failed. Please try again.';
+    });
+}
+
+function login() {
+    const uid = document.getElementById('uid').value;
+    const password = document.getElementById('password').value;
+
+    fetch('http://127.0.0.1:8086/api/users/authenticate', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            uid: uid,
+            password: password,
+        }),
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`Authentication failed. Status: ${response.status}`);
+        }
+        return response.text();
+    })
+    .then(token => {
+        // Save the token, for example, in a secure cookie or local storage
+        document.cookie = `jwt=${token}; max-age=3600; secure; httponly; path=/; samesite=None`;
+
+        // Include the token in the headers for subsequent requests
+        fetch('/api/some-protected-endpoint', {
+            method: 'GET',
+            headers: {
+                'Authorization': `Bearer ${getAuthToken()}`, // Include the token in the headers
+            },
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Handle the response from the protected endpoint
+            console.log('Data from protected endpoint:', data);
+        })
+        .catch(error => {
+            console.error('Error accessing protected endpoint:', error);
+        });
+    })
+    .catch(error => {
+        console.error('Authentication error:', error);
+        document.getElementById('error-message').textContent = 'Authentication failed. Please try again.';
+    });
+}
+
+// Helper function to get the authentication token from cookies
+function getAuthToken() {
+    const cookies = document.cookie.split('; ');
+    for (const cookie of cookies) {
+        const [name, value] = cookie.split('=');
+        if (name === 'jwt') {
+            return value;
+        }
+    }
+    return null;
+}
+
+    </script>
+</body>
+</html>
