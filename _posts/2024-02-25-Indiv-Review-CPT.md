@@ -1,6 +1,6 @@
 ---
 toc: true
-comments: false
+comments: true
 layout: post
 title: Final Review | CPT, CB Reqs, & more
 author: Matthew Wang
