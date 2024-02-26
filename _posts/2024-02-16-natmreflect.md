@@ -1,6 +1,6 @@
 ---
 toc: true
-comments: false
+comments: true
 layout: post
 title: Night At The Museum Reflection
 author: Matthew Wang
