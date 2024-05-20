@@ -5,7 +5,7 @@ layout: post
 title: Data Structures Writeup
 author: Matthew Wang
 description: Data structures project writeup with screenshots, labels, and explanations.
-courses: { csp: {week: 33} }
+courses: { csp: {week: 31} }
 type: hacks
 ---
 
